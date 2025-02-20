@@ -25,7 +25,7 @@ const ViewCustomers = () => {
   const fetchCustomers = async () => {
     try {
       const response = await customerService.getAllCustomers();
-      setCustomers(response.data || []);
+      setCustomers(response?.data || []);
     } catch (error) {
       setError(error.message || 'Failed to fetch customers');
     }
